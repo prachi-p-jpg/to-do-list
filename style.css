@@ -1,0 +1,116 @@
+.to_do{
+    background: orange;
+    border-radius: 1.25rem;
+    height: auto;
+    width: 100%;
+    max-width: 37.5rem;   /* 600px */
+    margin: auto;
+    margin-top: 12rem;    /* 200px */
+    padding: 1.25rem;
+    box-sizing: border-box;
+}
+
+.search{
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+}
+
+.search input{
+    border: none;
+    padding: 0.95rem;
+    width: 99.7%;
+    border-radius: 0.625rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.search input:focus{
+    outline: none;
+}
+
+.search button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    padding: 0.9rem 1rem;
+    min-width: 6rem;   /* 100px */
+    border-radius: 0.9rem;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    margin-top: 1.25rem;
+    padding: 0;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.25rem;
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.delete{
+    color: black;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.125rem solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+input[type="checkbox"]:checked{
+    background: black;
+}
+
+input[type="checkbox"]:checked::after{
+    content: "✔";
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+    .to_do{
+        margin-top: 6rem;
+        padding: 1rem;
+        width: 90%;
+    }
+
+    li{
+        font-size: 1rem;
+    }
+
+    .search button{
+        min-width: 5rem;
+        min-height:3rem;
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    input[type="checkbox"]{
+        width: 2rem;
+        height: 2rem;
+    }
+}
